@@ -1,0 +1,43 @@
+manifestVersion: 1
+id: scrutiny
+category: storage
+name: Scrutiny
+version: "0.8.0"
+tagline: WebUI for smartd S.M.A.R.T monitoring
+description: >-
+  Scrutiny is a Hard Drive Health Dashboard & Monitoring solution, 
+  merging manufacturer provided S.M.A.R.T metrics with real-world failure rates.
+
+  Scrutiny is a simple but focused application, with a couple of core features
+
+  - Web UI Dashboard - focused on Critical metrics
+  - smartd integration (no re-inventing the wheel)
+  - Auto-detection of all connected hard-drives
+  - S.M.A.R.T metric tracking for historical trends
+  - Customized thresholds using real world failure rates
+  - Temperature tracking
+  - Provided as an all-in-one Docker image (but can be installed manually)
+  - Configurable Alerting/Notifications via Webhooks
+  - (Future) Hard Drive performance testing & tracking
+
+releaseNotes: >-
+  General big fixes and imporvements.
+
+  See https://github.com/AnalogJ/scrutiny/releases for full release notes.
+developer: Jason Kulatunga (AnalogJ)
+website: https://github.com/AnalogJ/scrutiny
+dependencies:
+  - bitcoin
+  - electrs
+repo: https://github.com/AnalogJ/scrutiny
+support: https://github.com/AnalogJ/scrutiny/issues
+port: 3331
+gallery:
+  - 1.jpg
+  - 2.jpg
+  - 3.jpg
+path: ""
+defaultUsername: ""
+defaultPassword: ""
+submitter: Megastrik3
+submission: https://github.com/getumbrel/umbrel/pull/334

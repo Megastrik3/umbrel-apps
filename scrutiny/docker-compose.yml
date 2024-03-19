@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  app_proxy:
+    environment:
+      APP_HOST: scrutiny_web_1
+      APP_PROT: 3331
+  web:
+    image: ghcr.io/analogj/scrutiny:master-omnibus
+    cap_add:
+      - SYS_RAWIO
+    ports:
+      - "3331:8080" # webapp
+      #- "8086:8086" # influxDB admin
+    volumes:
+      - ${APP_DATA_DIR}/run/udev:/run/udev:ro
+      - ${APP_DATA_DIR}/config:/opt/scrutiny/config
+      - ${APP_DATA_DIR}/influxdb:/opt/scrutiny/influxdb
+    devices:
+      - "/dev/sda"
